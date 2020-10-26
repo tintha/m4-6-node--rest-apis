@@ -18,20 +18,20 @@ _This activity is more about the discussion in how to best organize data endpoin
 
 ## Your Answer
 
-| endpoint                | method   | Description                         |
-| ----------------------- | -------- | ----------------------------------- |
-| `/`                     | `GET`    | Homepage.                           |
-| `/customers`            | `GET`    | Access to the customers list.       |
-| `/customers`            | `POST`   | Add a new customer.                 |
-| `/customers/id`         | `DELETE` | Delete an existing customer.        |
-| `/customers/id`         | `PUT`    | Update an existing customer.        |
-| `/products`             | `GET`    | Access to the products list.        |
-| `/products`             | `POST`   | Add a new product.                  |
-| `/products/id`          | `GET`    | Access to a product by its id.      |
-| `/products/id`          | `PUT`    | Update a product by its id.         |
-| `/products/id`          | `DELETE` | Delete a product by its id.         |  |
-| `/seating/furniture`    | `GET`    | Access seating furniture list.      |
-| `/seating/furniture`    | `POST`   | Add new seating furniture.          |
-| `/seating/furniture/id` | `GET`    | Access seating furniture by its id. |
-| `/seating/furniture/id` | `PUT`    | Update seating furniture by its id. |
-| `/seating/furniture/id` | `DELETE` | Delete seating furniture by its id. |
+| endpoint                | method   | Description                            |
+| ----------------------- | -------- | -------------------------------------- |
+| `/`                     | `GET`    | Homepage.                              |
+| `/customers`            | `GET`    | Access to the customers list.          |
+| `/customers`            | `POST`   | Add a new customer.                    |
+| `/customers/id`         | `DELETE` | Delete an existing customer.           |
+| `/customers/id`         | `PATCH`  | Partially update an existing customer. |
+| `/products`             | `GET`    | Access to the products list.           |
+| `/products`             | `POST`   | Add a new product.                     |
+| `/products/id`          | `GET`    | Access to a product by its id.         |
+| `/products/id`          | `PATCH`  | Update a product by its id.            |
+| `/products/id`          | `DELETE` | Delete a product by its id.            |  |
+| `/seating/furniture`    | `GET`    | Access seating furniture list.         |
+| `/seating/furniture`    | `POST`   | Add new seating furniture.             |
+| `/seating/furniture/id` | `GET`    | Access seating furniture by its id.    |
+| `/seating/furniture/id` | `PATCH`  | Update seating furniture by its id.    |
+| `/seating/furniture/id` | `DELETE` | Delete seating furniture by its id.    |
