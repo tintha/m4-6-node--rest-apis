@@ -36,10 +36,17 @@ const handleGuessLetter = (req, res) => {
       wordArray.push(false);
     }
   }
-  res.status(200).json({
-    status: 200,
-    guessed: wordArray
-  })
+  if (letter.length !== 1) {
+    res.status(400).json({
+      status: 400,
+      message: `More than one letter`
+    })
+  } else {
+    res.status(200).json({
+      status: 200,
+      guessed: wordArray
+    })
+  }
 }
 
 module.exports = { handleWords, handleRandomWord, handleGuessLetter };
