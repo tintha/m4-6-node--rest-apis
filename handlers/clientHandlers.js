@@ -42,33 +42,39 @@ const handleAddNewClient = (req, res) => {
 
   // generate id number
   newClient.id = uuidv4();
-  
+
   // check if client already exists
   const clientExists = clients.find((client) => client.email === newClient.email);
-
+  console.log(clients);
   if (clientExists !== undefined) {
     res.status(400).json({
       status: 400,
       message: 'Client already exists'
     })
-  } else {
+  } 
+    // add new client to array
+    clients.push(newClient);
+    
     res.status(201).json({
       status: 201,
       message: 'Sucessfully created new client',
       data: newClient,
     })
-  }
+  
 }
 
 const handleDelete = (req, res) => {
   const { id } = req.params;
   const client = clients.find((client) => client.id === id);
+  const theIndex = clients.indexOf(client);
+  console.log(`index: ${theIndex}`);
   if (!client) {
     res.status(400).json({
       status: 400,
       message: 'Client not found'
     })
   } else {
+    clients.splice(theIndex, 1);
     res.status(202).json({
       status: 202,
       message: `${client.name} has been deleted`
